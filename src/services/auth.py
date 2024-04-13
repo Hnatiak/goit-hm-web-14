@@ -19,7 +19,7 @@ class Auth:
     SECRET_KEY = config.SECRET_KEY_JWT
     ALGORITHM = config.ALGORITHM
     cache = redis.Redis(
-        host=os.getenv("REDIS_HOST"),
+        host=os.getenv("REDIS_DOMAIN"),
         port=os.getenv("REDIS_PORT"),
         db=0,
         password=os.getenv("REDIS_PASSWORD"),
